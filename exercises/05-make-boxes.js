@@ -7,8 +7,34 @@
 // *****
 // *****
 // *****
+function makeSquare (num) {
+    var i = 0
+    var asteriskLine = ''
+    while (i < num) {
+        // console.log('testing my loop: ' + i)
+        asteriskLine = asteriskLine + '*'
+        // console.log(asteriskLine)
+        i++ //increment i in my while loop
+    }
 
+// at this point, asteriskLine is good
 
+    var j = 0
+    var box = []
+    while  (j<num) {
+        box.push(asteriskLine)
+        j++
+    }
+
+    return box.join('\n')
+}
+
+var myBox = ['***','***','***']
+console.log(myBox.join('\n'))
+
+console.log (makeSquare (3))
+console.log ('~~~~~~~~~~~~~~~~~~~~')
+console.log(makeSquare (8))
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "makeBox" which is given a width and height and returns a
